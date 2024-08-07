@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+
+
+<form method="post"  enctype="multipart/form-data" style="padding-bottom:300px;">{% csrf_token %}
+    <table>
+    <tr><td>COMPANY NAME
+      <br><input name="cname" value="{{job.uname}}">
+    </td></tr>
+        <br><br>
+       <tr><td>JOBNAME
+      <br><input name="jobtitle" value="{{job.jobtitle}}">
+    </td></tr>
+        <br><br>
+       <tr><td>USERNAME
+      <br><input name="uname" value="{{user.uname}}"></td></tr><br><br>
+    <tr><td>EMAIL
+      <br><input  type="email" name="email" value="{{user.email}}"></td></tr><br><br>
+     <tr><td>PHONE NUMBER
+      <br><input type="number" name="phone" placeholder="enter phonenumber"></td></tr><br><br>
+     <tr><td>QUALIFICATION
+      <br><input name="quali"  placeholder="enter qualification" ></td></tr><br><br>
+       <tr><td>EXPERIENCE<br>
+<!--      <br><input name="exp"  placeholder="enter experience"></td></tr><br><br>-->
+<!--         <label>EXPERIENCE</label><br>-->
+        <select name="exp">
+            <option>select required years of experience</option>
+            <option>0-1</option>
+            <option>1-2</option>
+            <option>2-3</option>
+            <option>3-4</option>
+            <option>4-5</option>
+            <option>5-6</option>
+            <option>6-7</option>
+            <option>7-8</option>
+
+        </select><br>
+       <tr><td>RESUME
+      <br><input name="resume"  type="file"  placeholder="upload resume"></td></tr><br><br>
+  </table>
+    <br>
+<!--<input type="checkbox" >-->
+<!--    <label style="color:white; font-size:18px;font-weight:bold;">I do hereby declare that all the above information given by me are true and ready to submit my valid certificates to college </label>-->
+<!--           <br><br>-->
+        <button type="submit" style="font-size:25px;background-color:black;color:lightblue;border-radius:20px;width:140px;">SUBMIT</button>
+
+    <br><br>
+
+
+</form>
+
+</body>
+</html>
+<style>
+html,
+body {
+  height: 100%;
+
+  background-image: url("https://www.smiledu.in/wp-content/uploads/2020/08/APPLY-NOW.jpg");
+   background-repeat: no-repeat;
+
+   background-size: cover;
+
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+div{
+
+position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  color:white;
+
+  font-size: 30px;
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+a{
+color:white;
+}
+input{
+font-size:20px;
+}
+h1{
+color:black;
+margin:20px;
+font-size:80px;
+padding-right:60px;
+padding-left:30px;
+padding-top:50px;
+padding-bottom:400px;
+font-family: 'brush script mt', cursive;
+}
+table{
+font-size:28px;
+font-weight:bold;
+color:black;
+padding-right:700px;
+}
+
+
+</style>

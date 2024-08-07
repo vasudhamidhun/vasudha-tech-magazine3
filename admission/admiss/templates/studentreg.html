@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="cover">
+    <br>
+    <center><h1 style=" font-family: 'brush script mt', cursive;">REGISTRATION</h1></center><br><br>
+    <center>
+        <br><br>
+<form method="post" style=" width:500px;padding-bottom:100px;">
+ {% csrf_token %}
+  <br>
+   <label>USERNAME</label><br>
+<input type="text" name="uname" placeholder="enter user name"><br>
+     <label>EMAIL</label><br>
+<input type="email" name="email" placeholder="enter emailid "><br>
+      <label>CONTACT</label><br>
+ <input type="number" name="phnno" placeholder="enter phonenumber "><br>
+      <label> HIGHEST QUALIFICATION</label><br>
+    <input type="text" name="qualification" placeholder="enter qualification "><br>
+      <label>DATE OF BIRTH</label><br>
+<input type="date" name="dob" placeholder="enter dob "><br>
+      <label>PASSWORD</label><br>
+    <input type="password" name="password" placeholder="enter password"><br>
+      <label>RE-TYPE PASSWORD</label><br>
+<input type="password" name="cpassword" placeholder="enter confirm password"><br><br>
+<input type="submit"style="font-size:25px;background-color:black;color:lightblue;border-radius:20px;width:140px;"  value="REGISTER"><br><br>
+    </form>
+    </center>
+</div>
+</body>
+</html>
+
+<style>
+html,
+body {
+  height: 100%;
+  width:100%;
+background-image: url("https://www.elc.net.au/wp-content/uploads/2015/05/student_at_PC_1600px.jpg");
+background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+div{
+
+position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  color:white;
+
+  font-size: 30px;
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+button{
+font-size:30px;
+}
+a{
+color:white;
+}
+input{
+font-size:20px;
+}
+
+label{
+color:white;
+font-size:30px;
+font-weight:bold;
+}
+input{
+color:black;
+font-size:20px;
+}
+h1{
+padding-left:80px;
+padding-bottom:550px;
+
+}
+form{
+
+padding-right:550px;
+
+}
+</style>

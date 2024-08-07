@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.wallpapersafari.com/71/43/VCwt9P.jpg");
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-left:30px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+h2{
+color:white;
+}
+p{
+color:black;
+}
+h3{
+color:white;
+}
+
+
+</style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+
+
+    <div class="offcanvas offcanvas-start text-bg-dark" id="demo">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Name:{{unm}}</h1>
+
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <h2>CONTACT INFO:</h2>
+      <h3>Email:{{eml}}</h3>
+      <h4>Phone:{{ph}}</h4>
+      <h4>Qualification:{{ql}}</h4>
+      <br>
+   <a href="http://127.0.0.1:8000/editprofile/{{id}}" class="btn btn-success">EDIT PROFILE</a>
+  </div>
+</div>
+<br><br>
+<div class="container-fluid mt-3">
+
+  <button style="font-size:30px;margin:20px;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">PROFILE
+  </button>
+</div>
+</form>
+
+<br><br>
+
+<div id="x">
+    <div class="row">
+      <div class="col-md-3">
+ <div class="card" style="width:300px;">
+    <img class="card-img-top" src="https://specials-images.forbesimg.com/imageserve/6010706b32cbb402c830ace5/960x0.jpg?fit=scale" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">VIEW VACANCY</h4>
+      <p class="card-text">Find suitable jobs here</p>
+      <a href="http://127.0.0.1:8000/viewpost/{{id}}" class="btn btn-primary">OPENINGS</a>
+    </div>
+      </div>
+    </div>
+
+      <div class="col-md-3">
+ <div class="card" style="width:300px ;">
+    <img class="card-img-top" src="https://youthincmag.com/wp-content/uploads/2018/06/company-building-min.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title"> COLLEGES</h4>
+      <p class="card-text">List of registered colleges</p>
+      <a href="http://127.0.0.1:8000/viewcollege/" class="btn btn-primary">VIEW LIST</a>
+    </div>
+      </div>
+    </div>
+      <div class="col-md-3">
+ <div class="card" style="width:300px">
+    <img class="card-img-top" src="https://youthincmag.com/wp-content/uploads/2018/06/company-building-min.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">APPLIED</h4>
+      <p class="card-text">List of applied colleges </p>
+      <a href="http://127.0.0.1:8000/viewpro/{{id}}" class="btn btn-primary">VIEW LIST</a>
+    </div>
+      </div>
+    </div>
+      <div class="col-md-3">
+ <div class="card" style="width:300px">
+    <img class="card-img-top" src="https://tse4.explicit.bing.net/th?id=OIP.cXHCt5MDAH_mZOfEv2kxywHaEo&pid=Api&P=0&h=180" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">VIEW REPLY</h4>
+      <p class="card-text">List of replies </p>
+      <a href="http://127.0.0.1:8000/viewstatus/{{id}}" class="btn btn-primary">VIEW LIST</a>
+    </div>
+      </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

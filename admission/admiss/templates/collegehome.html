@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/10/College-Wallpapers-HD.jpg");
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin:24px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+h2{
+color:black;
+
+font-weight:bold;
+}
+p{
+color:black;
+}
+h3{
+color:white;
+}
+.btn-wrapper{
+position:relative;
+}
+
+</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<br><br>
+<div id="parent" class="container-fluid">
+<center>
+<div id="y" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {% for i in obj %}
+        <h2>{{i.user.username}}</h2>
+        <a style=".." href="#"><h2>{{i.user.email}}</h2></a>
+
+
+
+      </div>
+    </div>
+  </div>
+    </center>
+<br><br>
+
+<div id="x">
+    <div class="row">
+      <div class="col-md-4"  style="padding:50px;">
+ <div class="card" style="width:350px;">
+    <img class="card-img-top" src="http://www.redeemthecommute.com/wp-content/uploads/2012/08/Course-Banner.png" alt="Card image" style="width:100%;height:170px;">
+    <div class="card-body">
+      <h4 class="card-title">ADD COURSES</h4>
+      <p class="card-text">Add your courses here</p>
+      <a href="http://127.0.0.1:8000/postcourse/{{i.id}}" class="btn btn-primary">POST</a>
+    </div>
+      </div>
+    </div>
+
+      <div class="col-md-4" style="padding:50px;">
+ <div class="card" style="width:350px">
+    <img class="card-img-top" src="https://pfo-ku.org/images/2017/JobVacancyPFO.jpg" alt="Card image" style="width:100%;height:170px;">
+    <div class="card-body">
+      <h4 class="card-title">ADD VACANCY</h4>
+      <p class="card-text">List of vacancy</p>
+      <a href="http://127.0.0.1:8000/postvacancy/{{i.id}}" class="btn btn-primary">POST</a>
+    </div>
+      </div>
+    </div>
+      <div class="col-md-4"  style="padding:50px;">
+ <div class="card" style="width:350px">
+    <img class="card-img-top" src="http://www.picpedia.org/highway-signs/images/application.jpg" alt="Card image" style="width:100%;height:150px;">
+    <div class="card-body">
+      <h4 class="card-title">APPLICATIONS</h4>
+      <p class="card-text">See those who are interested to join you</p>
+        <div class="btn-wrapper text-center d-flex justify-content-between">
+            <a href="http://127.0.0.1:8000/view/{{i.id}}/{{com}}" class="btn btn-primary btn-sm text-white d-flex align-items-center" >TEACHERS</a>
+        <a href="http://127.0.0.1:8000/studentview/{{i.id}}/{{com}}" class="btn btn-primary btn-sm text-white d-flex align-items-center">STUDENTS</a>
+            </div>
+
+
+
+    </div>
+      </div>
+    </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

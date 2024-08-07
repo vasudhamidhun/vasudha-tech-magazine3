@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+body {
+  height: 100%;
+
+ background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.wallpapersafari.com/41/71/ZSyx6q.jpg");
+}
+
+
+a{
+color:white;
+}
+h1{
+color:black;
+font-size:50px;
+font-family: 'brush script mt', cursive;
+padding-top:20px;
+padding-right:180px;
+}
+form{
+padding-bottom:400px;
+padding-right:180px;
+
+}
+table{
+font-size:22px;
+
+}
+
+</style>
+</head>
+<body>
+<center>
+    <h1>EDIT PROFILE</h1>
+    <form method="post">{% csrf_token %}
+  <table>
+    <tr><td>USERNAME
+      <br><input name="uname" value="{{user.uname}}">
+    </td></tr><br><br>
+    <tr><td>EMAIL
+      <br><input name="email" value="{{user.email}}"></td></tr><br><br>
+     <tr><td>PHONE NUMBER
+      <br><input name="phone" value="{{user.phone}}"></td></tr><br><br>
+     <tr><td>QUALIFICATION
+      <br><input name="qualification" value="{{user.qualification}}"></td></tr><br><br>
+  </table>
+    <br><br>
+
+        <button type="submit" style="font-size:25px;background-color:black;color:lightblue;border-radius:20px;width:140px;"">UPDATE</button>
+
+    <br><br>
+
+
+</form>
+ </center>
+</body>
+</html>
